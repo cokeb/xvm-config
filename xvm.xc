@@ -23,33 +23,13 @@
 		}
 	},
 	
-	"battleLabels": {
-		"formats": [
-			//hitlog
-			{
-				"$ref": { "file":"default/battleLabelsTemplates.xc", "path":"def.hitlogHeader" },
-				"hotKeyCode": 56, "onHold": "true", "visibleOnHotKey": false,
-				"format": "{{hitlog-header}}\n{{hitlog-body}}",
-				"y": 2,
-				"height": 500
-			},
-			//${ "default/battleLabelsTemplates.xc":"def.winChance" },
-			${ "default/battleLabelsTemplates.xc":"def.totalHP" }
-		]
-	},
-	
 	"battleResults": {
 		"showCrewExperience": true
 	},
 	
-	//"colors": ${"wotlabs-colors.xc":"colors"},
-	
 	"hangar": {
 		"defaultBoughtForCredits": true,
 		"enableEquipAutoReturn": true,
-		"enableGoldLocker": true,
-		"enableFreeXpLocker": true,
-		"allowExchangeXPInTechTree": false,
 		"carousel": {
 			"rows": 2
 		}
@@ -68,18 +48,5 @@
 	
 	"playersPanel": {
 		"startMode": "medium2"
-	},
-	
-	"sounds": {
-		"soundMapping": {
-			"time_buzzer_01": "",
-			"time_buzzer_02": "",
-			"xvm_battleEnd_2_min": "xvm_battleEnd_2_min",
-			"expl_ally_NPC": ""
-		}
-	},
-	
-	"userInfo": {
-		"startPage": 4
 	}
 }
