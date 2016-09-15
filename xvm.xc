@@ -23,23 +23,6 @@
 		}
 	},
 	
-	"battleLabels": {
-		"formats": [
-			//hitlog
-			{
-				"$ref": { "file":"default/battleLabelsTemplates.xc", "path":"def.hitlogHeader" },
-				"hotKeyCode": 56, "onHold": "true", "visibleOnHotKey": false,
-				"format": "{{hitlog-header}}\n{{hitlog-body}}",
-				"y": 2,
-				"height": 500
-			},
-			//${ "default/battleLabelsTemplates.xc":"def.winChance" },
-			${ "default/battleLabelsTemplates.xc":"def.totalHP" },
-			${ "default/battleLabelsTemplates.xc":"def.avgDamage" },
-			${ "default/battleLabelsTemplates.xc":"def.mainGun" }
-		]
-	},
-	
 	"battleResults": {
 		"showCrewExperience": true
 	},
@@ -66,6 +49,42 @@
 	"login": {
 		"saveLastServer": true,
 		"autologin": true
+	},
+	
+	"minimap": {
+		"labels": {
+			"formats": [
+				//HP circles for currently spotted vehicles
+				{
+					"$ref": { "file":"default/minimapLabelsTemplates.xc", "path":"def.defaultItem" },
+					"flags": [ "ally", "squadman", "enemy", "teamKiller", "spotted", "alive" ],
+					"textFormat": { "font": "dynamic", "size": 18, "align": "center", "valign": "center" },
+					"format": "<font color='{{.minimap.labelsData.colors.dot.{{sys-color-key}}}}'>{{hp-ratio%.335a|&#x1B3;}}</font>",
+					"align": "center",
+					"valign": "center",
+					"y": 0.8
+				},
+				//HP circles for no longer spotted vehicles
+				{
+					"$ref": { "file":"default/minimapLabelsTemplates.xc", "path":"def.defaultItem" },
+					"flags": [ "ally", "squadman", "enemy", "teamKiller", "lost", "alive" ],
+					"textFormat": { "font": "dynamic", "size": 18, "align": "center", "valign": "center" },
+					"format": "<font color='{{.minimap.labelsData.colors.lostDot.{{sys-color-key}}}}'>{{hp-ratio%.335a|&#x1B3;}}</font>",
+					"align": "center",
+					"valign": "center",
+					"alpha": 75,
+					"y": 0.8
+				},
+				//${ "default/minimapLabelsTemplates.xc":"def.vtypeSpotted" },
+				${ "default/minimapLabelsTemplates.xc":"def.vehicleSpotted" },
+				${ "default/minimapLabelsTemplates.xc":"def.nickSpotted" },
+				${ "default/minimapLabelsTemplates.xc":"def.xmqpEvent" },
+				${ "default/minimapLabelsTemplates.xc":"def.vtypeLost" },
+				${ "default/minimapLabelsTemplates.xc":"def.vehicleLost" },
+				${ "default/minimapLabelsTemplates.xc":"def.nickLost" },
+				${ "default/minimapLabelsTemplates.xc":"def.vtypeDead" }
+			]
+		}
 	},
 	
 	"playersPanel": {
