@@ -34,7 +34,9 @@
 				"height": 500
 			},
 			//${ "default/battleLabelsTemplates.xc":"def.winChance" },
-			${ "default/battleLabelsTemplates.xc":"def.totalHP" }
+			${ "default/battleLabelsTemplates.xc":"def.totalHP" },
+			${ "default/battleLabelsTemplates.xc":"def.avgDamage" },
+			${ "default/battleLabelsTemplates.xc":"def.mainGun" }
 		]
 	},
 	
